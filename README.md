@@ -1,6 +1,6 @@
 # 🌾 AgriYield - AI-Powered Smart Farming Platform
 
-AgriYield is a comprehensive, production-ready Full-Stack Agritech mobile application designed to empower farmers with data-driven insights. By leveraging Artificial Intelligence, real-time weather data, and market trends, AgriYield helps farmers maximize their crop production, optimize resource usage, and make informed agricultural decisions.
+AgriYield is a full-stack agritech web application designed to empower farmers with data-driven insights. By leveraging Artificial Intelligence, real-time weather data, and market trends, AgriYield helps farmers maximize their crop production, optimize resource usage, and make informed agricultural decisions.
 
 The application is completely bilingual (English & Hindi), ensuring accessibility for a wider demographic of farmers.
 
@@ -15,7 +15,7 @@ The application is completely bilingual (English & Hindi), ensuring accessibilit
 - **📍 Location Services**: Automatically detects the farmer's location via GPS to provide hyper-localized weather and predictions.
 - **🔒 Secure Authentication**: Robust user account system with encrypted passwords and JWT-based session management.
 - **📊 Prediction History**: Automatically saves past predictions to a cloud database so farmers can track their yield estimates over time.
-- **🎨 Glassmorphic UI**: Features a beautiful, modern, highly responsive, and accessible user interface built specifically for mobile devices.
+- **🎨 Glassmorphic UI**: Features a modern, responsive, and accessible interface for mobile and desktop browsers.
 
 ---
 
@@ -121,11 +121,13 @@ Open the local Vite URL in your browser (typically `http://localhost:5173`).
 
 ## 🌐 Production Deployment
 
-AgriYield is fully deployed and accessible globally.
+The application is deployed as separate web and API services:
 
-- **Cloud Hosting**: Both the Node.js Backend and the Python AI Service are hosted securely on [Render](https://render.com).
-- **CI/CD Pipeline**: The repository utilizes **GitHub Actions**. Every time code is pushed to the `main` branch, GitHub Actions automatically builds a native Android APK (`app-release.apk`) using Expo's local build tools, completely bypassing the need for a premium EAS subscription.
-- **Artifacts**: You can download the latest production-ready Android APK directly from the "Actions" tab in this repository.
+- **Frontend**: The React + Vite web app can be deployed to [Vercel](https://vercel.com). Set its API URL to the public URL of the backend.
+- **Backend**: Deploy the Node.js/Express API to a Node.js hosting provider such as [Render](https://render.com). Configure its MongoDB, JWT, and AI service environment variables in the hosting dashboard.
+- **AI Service**: The Python/FastAPI prediction service can be deployed to Vercel or another Python hosting provider. Set the backend's `AI_SERVICE_URL` to the deployed AI service URL.
+
+Each service must be deployed and configured independently. This repository currently provides a web application; it does not build or publish an Android APK.
 
 ---
 
