@@ -1,0 +1,8 @@
+AI Model loaded successfully.
+INFO:     127.0.0.1:55575 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55577 - "POST /api/v1/predict HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65357 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49685 - "POST /api/v1/predict HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63217 - "POST /api/v1/predict HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53136 - "POST /api/v1/predict HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54917 - "POST /api/v1/predict HTTP/1.1" 200 OK
