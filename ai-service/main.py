@@ -2,6 +2,14 @@ import pandas as pd
 import numpy as np
 from sklearn.preprocessing import LabelEncoder
 
+from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get("/")
+def home():
+    return {"message": "AI service is running"}
+
 # ...........DATASET LOADING..........
 # Dataset 1
 df1 = pd.read_csv("../datasets/raw/Crop_recommendation.csv")
