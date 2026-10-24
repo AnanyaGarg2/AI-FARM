@@ -1,2 +1,2 @@
-export const API_URL = 'http://localhost:5000';
+export const API_URL = 'https://ai-farm-bgkn.onrender.com/';
 
