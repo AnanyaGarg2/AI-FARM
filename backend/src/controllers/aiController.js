@@ -19,7 +19,7 @@ const getPrediction = async (req, res) => {
       return res.status(400).json({ status: 'error', message: 'Missing required features for AI prediction. Please provide all 14 features.' });
     }
 
-    const aiServiceUrl = process.env.AI_SERVICE_URL || 'http://localhost:8000';
+    const aiServiceUrl = process.env.AI_SERVICE_URL || AI_URL || 'https://ai-farm-bgkn.onrender.com'; // Default to the frontend URL if not set
     
     // Forward the payload to the FastAPI Python service
     const response = await axios.post(`${aiServiceUrl}/api/v1/predict`, {
